@@ -18,8 +18,11 @@
         @content;
     }
 }
-
-
+@mixin xlScreen {
+    @media (min-width: v.$xlScreen) {
+        @content;
+    }
+}
 @mixin boton($bgColor, $colorTexto) {
     background-color: $bgColor;
     padding: 2rem 4rem;
@@ -29,7 +32,7 @@
     font-size: 2rem;
     font-weight: 700;
     display: block;
-
+    
     @include tablet {
         display: inline-block;
     }
@@ -39,4 +42,16 @@
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
+}
+@mixin scrollHorizontal {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    > * {
+        scroll-snap-align: center;
+    }
+    @include tablet { 
+        overflow: hidden;
+    }
 }

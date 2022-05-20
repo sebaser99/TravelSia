@@ -21,11 +21,13 @@
     &__busqueda-boton {
         @include m.boton(v.$blanco, v.$primario);
         width: 100%;
-        @include m.tablet { 
+        @include m.telefono { 
               width: 60%;
+              margin: 0 auto;
         }
         @include m.desktop { 
               width: auto;
+              
         }
         
         &:hover {

@@ -16,25 +16,33 @@
         align-items: center;
 
         @include m.tablet { 
-             @include m.grid(2, 4rem) 
+             @include m.grid(2, 2rem) 
         }
         @include m.desktop { 
-              @include m.grid(4, 4rem)
+              @include m.grid(3, 2rem)
+        }
+        @include m.xlScreen { 
+            @include m.grid(4, 2rem) 
         }
     }
    
 }
 
 .destino {
-    margin-bottom: 5rem;
+    display: flex;
+    margin-bottom: 3rem;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
     &:last-of-type {
         margin-bottom: 0;
     }
-    &__informacion {
-        text-align: center;
-    }
+    
     &__imagen {
-        display: flex;
-        justify-content: center;
+        width: 14rem;
+    }
+    &__nombre,
+    &__distancia {
+        margin: 0;
     }
 }

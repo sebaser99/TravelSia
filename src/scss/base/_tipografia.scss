@@ -16,3 +16,14 @@ h3 {
 a {
     text-decoration: none;
 }
+
+[class$="__heading"] {
+    margin: 2rem 0;
+}
+
+[class$="__enlace"],
+[class$="__enlace--barra"] {
+    &:hover {
+        text-decoration: underline;
+    }
+}

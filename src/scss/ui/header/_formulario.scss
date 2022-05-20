@@ -60,9 +60,12 @@
         font-weight: 700;
         font-size: 1.2rem;
 
-        @include m.tablet { 
+        @include m.telefono { 
               width: 60%;
               margin: 0 auto;
+        }
+        @include m.desktop { 
+            width: 100%;
         }
         
         &:hover {
