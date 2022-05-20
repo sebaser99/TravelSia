@@ -1,0 +1,40 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.destinos {
+
+    &__heading {
+        margin: 5rem 3rem;
+        @include m.tablet { 
+              margin: 5rem 0;
+        }
+    }
+
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include m.tablet { 
+             @include m.grid(2, 4rem) 
+        }
+        @include m.desktop { 
+              @include m.grid(4, 4rem)
+        }
+    }
+   
+}
+
+.destino {
+    margin-bottom: 5rem;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    &__informacion {
+        text-align: center;
+    }
+    &__imagen {
+        display: flex;
+        justify-content: center;
+    }
+}

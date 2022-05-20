@@ -1,0 +1,40 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.barra {
+    display: none;
+    @include m.tablet { 
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+    }
+    &__navegacion {
+        display: flex;
+    }
+    &__link {
+        color: v.$blanco;
+        margin: 0 1rem;
+        &:hover {
+            color: v.$primario;
+        }
+    }
+    &__nombre {
+        // color: darken(v.$primario, 10%);
+        color: v.$blanco;
+        font-size: 5rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        // background-color: rgb(125 125 125 / .4);
+        background-image: radial-gradient(circle, rgb(255, 56, 92) 0%, v.$secundario 100% );
+        margin: 0;
+        padding: 0 .5rem;
+        border-radius: .5rem;
+    }
+    &__login,
+    &__navegacion {
+        background-color: rgb(0 0 0 / 0.1);
+        padding: .5rem;
+        border-radius: 1rem;
+    }
+
+}
